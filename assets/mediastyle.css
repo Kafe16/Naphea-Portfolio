@@ -1,0 +1,27 @@
+:root{
+    --color-body: #b6cbce;
+    --color-heading: #efeeec;
+    --color-base: #a0c9e7; 
+    --color-base2: #384E71;
+    --color-brand: #ecc6bb;
+    --color-brand2: #f2dcd0;
+    --sidebar-width: 240px;
+    --font-base: 'Rubik', sans-serif;
+    --font-logo: 'Pacifico', cursive;
+}
+
+@media (min-width: 992px) {
+    /* Manage sideBar with Bg IMAGE */
+    .navbar{
+        min-height: 100vh;
+        width: var(--sidebar-width);
+        background: linear-gradient(rgba(56, 78, 113, 0.9), rgba(56, 78, 113, 0.9)), url(./img/side_img.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /* Content Wrapper */
+    #content-wrapper{
+        padding-left: var(--sidebar-width);
+    }
+}   

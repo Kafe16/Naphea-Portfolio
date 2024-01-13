@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root{
+    --color-body: #b6cbce;
+    --color-heading: #efeeec;
+    --color-base: #1e2e48; 
+    --color-base2: #384E71;
+    --color-brand: #ecc6bb;
+    --color-brand2: #f2dcd0;
+    --sidebar-width: 240px;
+    --font-base: 'Rubik', sans-serif;
+    --font-logo: 'Pacifico', cursive;
+}
+
+body{
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base);
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover{
+    color: var(--color-brand);
+}
+
+img{
+    width: 100%;
+}
+.text-brand{
+    color: var(--color-brand);
+}
+
+.full-height{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.bg-base{
+    background-color: rgba(30, 46, 72, 0.835);
+}
+
+.shadow-effect{
+    transition: all 0.5s;
+}
+.shadow-effect:hover{
+    box-shadow:  4px -4px 0 0 var(--color-brand)
+}
+/* NAVBAR */
+.navbar{
+    background-color: rgba(30, 46, 72);
+}
+.navbar-brand{
+    font-family: var(--font-logo);
+}
+
+.navbar .nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-heading);
+}
+
+.navbar .nav-link:hover{
+    color: #ecc6bb ;
+}
+
+.navbar .nav-link.active{
+    color: #ecc6bb;
+}
+
+.navbar-brand img{
+    border: 8px solid var(--color-brand2);
+}
+/* END-NAVBAR */
+
+/* BTN */
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand{
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+}
+
+.btn-brand:hover,
+.btn-brand:focus{
+    background-color: var(--color-brand2);
+    color: var(--color-base2);
+}
+
+.link-custom{
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom:after{
+    content: "";
+    width: 0;
+    margin-top: 5px;
+    height: 3px;
+    padding-top: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    border-radius: 5px;
+    transition: all 0.3s;
+
+}
+
+.link-custom:hover::after{
+    width: 80%;
+}
+
+/* BOUT ME */
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: #384E71;
+}
+/* My Skill */
+
+/* Acheivement style */
+.card-custom .card-acheivement-img{
+    overflow: hidden;
+}
+
+.card-custom .card-acheivement-img img{
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-acheivement-img img{
+    transform: scale(1.15);
+}
+
+#contact .form-control {
+    background-color: rgba(30, 46, 72, 0.835);
+    border-color: var(--color-base2);
+    color: #b6cbce;
+   
+}
+/* Change place holder Text color  */
+.form-control::placeholder{
+    color: rgba(171, 190, 220, 0.835); 
+}
+
+#contact .form-control:focus{
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact input.form-control {
+    height: 45px;
+}
+
+.social-links a{
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    display: inline-flex;
+    gap: 1.5rem;
+}
+
+.popup-message{
+    width: 360px;
+    background-color: rgba(4, 23, 55);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1); 
+    text-align: center;
+    padding: 30px 30px;
+    visibility: hidden;
+}
+
+.popup-message img{
+    width: 100px;
+}
+
+.openPopup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1); 
+}
